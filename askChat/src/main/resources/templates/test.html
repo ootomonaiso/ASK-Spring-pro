@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>質問のカテゴリ提案</title>
+</head>
+<body>
+    <h1>質問のカテゴリ提案</h1>
+
+    <form action="/get-relevant-category" method="get">
+        <label for="question">質問を入力してください:</label>
+        <input type="text" id="question" name="question" required>
+        <button type="submit">カテゴリを提案する</button>
+    </form>
+
+    <div>
+        <h2>最も関連するカテゴリ:</h2>
+        <p th:text="${mostRelevantCategory}">ここに関連するカテゴリが表示されます</p>
+    </div>
+</body>
+</html>
